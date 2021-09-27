@@ -1,0 +1,7 @@
+sqrt(1) 0
+sqrt(2) 1
+sqrt(3) 2
+sqrt(4) 3
+sqrt(5) 4
+sqrt(6) 5 
+sqrt(7) 6
