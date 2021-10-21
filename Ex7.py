@@ -2,11 +2,11 @@ from numpy import sin, linspace, pi
 import matplotlib.pyplot as plt
 #import math
 
-n=100000
+n=2000
 frequency = 500.0 #en Hz
 amplitude = 2.0 #en V
 p=1/frequency
-t=linspace(0.0,p,1000)
+t=linspace(0.0,p,100)
 uharm = []
 ug = [0]
 
