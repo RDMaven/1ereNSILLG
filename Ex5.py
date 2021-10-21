@@ -1,5 +1,3 @@
-import inquirer
-
 print()
 print("+------------------------------------------------------------------+")
 print("| Déterminons la valeur de la résistance à 3 couleurs + tolérance. |")
@@ -20,12 +18,12 @@ A4 = input("la tolérance : (or, argent) : ").lower()
 
 print()
 R = (A1_val*10 + A2_val)*10**A3_val
-print("la résisstance est de : " + str(R) + " Ω " + couleur[A4])
+print(f"la résisstance est de : {str(R)} Ω {couleur[A4]}.")
 print()
 vf = input("voulez-vous convertir en kΩ ? (y/n) : " )
 print()
-if vf == 'y':
+if vf == 'y' or vf == "yes":
   R = R/1000
-  print("La résistance est de : "+ str(R) + "kΩ")
+  print(f"La résistance est de : {str(R)} kΩ.")
 else :
   print("Done.")
