@@ -9,7 +9,7 @@ for cercle in msgPerseverance123:
         cercle = cercle[7:]
     code += " "
 
-print(code)
+print(f"Le code est : '{code}'.")
 
 
 
