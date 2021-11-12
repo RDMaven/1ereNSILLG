@@ -56,7 +56,7 @@ class Map:
         my_map = folium.Map(location = self.center, zoom_start = self.zoom_start)
 
         #Display the map
-        my_map.save("map.html")
+        my_map.save("./TP/parachute_localisation.html")
         webbrowser.open("map.html")
 
 coords = [lat,long]
