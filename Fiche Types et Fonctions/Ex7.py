@@ -1,51 +1,32 @@
-from numpy import append, nbytes, sin, linspace, pi
-import matplotlib.pyplot as plt
-#import math
+from pyfirmata2 import Arduino
 import time
-
-def calc_amplitude(x,y):
-    if y%2 == 0:
-        ai = 0
-        return ai
-    else:
-        ai = 4*x/(y*pi)
-        return ai
-
-s=0
-nbz = [s*100 for s in range(100)]
-print(nbz[1:])
-for n in nbz[1:]:
-    start = time.time()
-
-    frequency = 500.0 #en Hz
-    amplitude = 2.0 #en V
-    p=1/frequency
-    t=linspace(0.0,p,100)
-    uharm = []
-    ug = [0]
-
-    for i in range(n):
-        ai = calc_amplitude(amplitude, i)
-        fi = frequency*i
-        uharm.append(ai*sin(2*pi*fi*t))
-        ug += uharm[i]
-        plt.plot(t,uharm[i])
-
-    plt.plot(t, ug)
-
-    s="n ="+str(n)+", freq ="+str(frequency)+"Hz, ampl. ="+str(amplitude)+"V"
-    plt.title("Synthees de Fourier\n"+s)
-    plt.xlabel("t(s)")
-    plt.ylabel("u(V)")
-
-    end = time.time()
-    hs = open("complexité3_ex7.txt","a")
-    hs.write(str(end-start) + "\n")
-    hs.close() 
-    print(">> ",n, " :")
-    print(end - start)
-    print()
-    print("+-------------------------------------------------+")
-    print()
-
-    #plt.show()
+try:
+    macarte = Arduino('COM7')
+except:
+    print("Problème de liaison avec Arduino")
+    liaison = False
+else:
+    macarte.samplingOn()
+    servo = macarte.get_pin("d:5:s")
+    potar = macarte.get_pin("a:0:i")
+    led = macarte.get_pin("d:3:o")
+    bp = macarte.get_pin("d:4:i")
+    time.sleep(0.03)
+    angleservo = 90
+    servo.write(angleservo)
+    time.sleep(1)
+    liaison = True
+if liaison==True:
+    for i in range(50) :
+        print("A0 : {:.2f}V".format(potar.read()*5))
+        time.sleep(0.2)
+        val_bp = bp.read()
+        if val_bp==True :
+            led.write(1)
+            print("bp : on")
+            time.sleep(1)
+        else :
+           led.write(0)
+           print("bp : off")
+        macarte.exit()
+print("Arrêt du programme")

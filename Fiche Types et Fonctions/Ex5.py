@@ -1,29 +1,23 @@
-print()
-print("+------------------------------------------------------------------+")
-print("| Déterminons la valeur de la résistance à 3 couleurs + tolérance. |")
-print("+------------------------------------------------------------------+")
-print()
+import numpy as np
+import matplotlib.pyplot as plt
+#import math
 
-couleur = {"noir":0,"marron":1, "rouge":2, "orange":3, "jaune":4, "vert":5, "bleu":6, "violet":7, "gris":8, "blanc":9, "or":"5%", "argent":"10%"}
-print("Les couleurs sont : " + str(couleur.keys()) + ".")
+with open("file.txt") as f:
+    lines = f.readlines()
+    x = [line.split()[0] for line in lines]
+    y = [line.split()[1] for line in lines]
 
 
-for i in range(3):
-  print()
-  exec("A"+str(i+1)+" = input('Valeur A"+str((i+1))+" : ').lower()")
-  exec("A"+str(i+1)+"_val = "+ str(couleur[eval("A"+str(i+1))]))
+fig = plt.figure()
 
-print()
-A4 = input("la tolérance : (or, argent) : ").lower()
+ax1 = fig.add_subplot(111)
 
-print()
-R = (A1_val*10 + A2_val)*10**A3_val
-print(f"la résisstance est de : {str(R)} Ω {couleur[A4]}.")
-print()
-vf = input("voulez-vous convertir en kΩ ? (y/n) : " )
-print()
-if vf == 'y' or vf == "yes":
-  R = R/1000
-  print(f"La résistance est de : {str(R)} kΩ.")
-else :
-  print("Done.")
+ax1.set_title("Exercice 6 !")    
+ax1.set_xlabel('x label')
+ax1.set_ylabel('y label')
+
+ax1.plot(x,y, c='c', label='Valeurs')
+
+leg = ax1.legend()
+
+plt.show()
