@@ -1,23 +1,51 @@
-import numpy as np
+from numpy import append, nbytes, sin, linspace, pi
 import matplotlib.pyplot as plt
 #import math
+import time
 
-with open("file.txt") as f:
-    lines = f.readlines()
-    x = [line.split()[0] for line in lines]
-    y = [line.split()[1] for line in lines]
+def calc_amplitude(x,y):
+    if y%2 == 0:
+        ai = 0
+        return ai
+    else:
+        ai = 4*x/(y*pi)
+        return ai
 
+s=0
+nbz = [s*100 for s in range(100)]
+print(nbz[1:])
+for n in nbz[1:]:
+    start = time.time()
 
-fig = plt.figure()
+    frequency = 500.0 #en Hz
+    amplitude = 2.0 #en V
+    p=1/frequency
+    t=linspace(0.0,p,100)
+    uharm = []
+    ug = [0]
 
-ax1 = fig.add_subplot(111)
+    for i in range(n):
+        ai = calc_amplitude(amplitude, i)
+        fi = frequency*i
+        uharm.append(ai*sin(2*pi*fi*t))
+        ug += uharm[i]
+        plt.plot(t,uharm[i])
 
-ax1.set_title("Exercice 6 !")    
-ax1.set_xlabel('x label')
-ax1.set_ylabel('y label')
+    plt.plot(t, ug)
 
-ax1.plot(x,y, c='c', label='Valeurs')
+    s="n ="+str(n)+", freq ="+str(frequency)+"Hz, ampl. ="+str(amplitude)+"V"
+    plt.title("Synthees de Fourier\n"+s)
+    plt.xlabel("t(s)")
+    plt.ylabel("u(V)")
 
-leg = ax1.legend()
+    end = time.time()
+    hs = open("complexité3_ex7.txt","a")
+    hs.write(str(end-start) + "\n")
+    hs.close() 
+    print(">> ",n, " :")
+    print(end - start)
+    print()
+    print("+-------------------------------------------------+")
+    print()
 
-plt.show()
+    #plt.show()
