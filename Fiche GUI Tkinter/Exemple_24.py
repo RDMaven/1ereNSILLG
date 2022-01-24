@@ -12,7 +12,7 @@ poly = canvas.create_polygon([160,45,175,20,190,45,175,70], width=2, fill='blue'
 def ColorChange():
     canvas.itemconfigure(oval, fill='blue')  
     canvas.itemconfigure(rect, fill='#67A12B')
-    canvas.itemconfigure(rect, fill='#001020')
+    canvas.itemconfigure(poly, fill='#001020')
 
 btn = Tk.Button(fenetre, text='Changer la couleur des objets', command= ColorChange)
 btn.pack()
