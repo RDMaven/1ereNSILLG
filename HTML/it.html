@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Italy circle</title>
+    <script src="./activite_1_1.js"></script>
+
 
     <style type="text/css">
 
@@ -25,6 +27,19 @@
             font-size: 30px;
         }
 
+        .rotate {
+            animation: rotation 8s infinite linear;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
+
     </style>
 
 </head>
@@ -32,6 +47,6 @@
 <body>
     <p>This is <strong>italy</strong> circle.</p>
 
-    <div><img src="./images/italy_circle.png"></div>
+    <div><img src="./images/italy_circle.png" class="rotate"></div>
 </body>
 </html>
