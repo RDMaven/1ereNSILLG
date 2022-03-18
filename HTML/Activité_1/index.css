@@ -1,0 +1,116 @@
+/*
+    Stylesheet pour la page 'index.html'
+*/
+
+h1,h2,h3,h4 {
+    text-align: center;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #373a3c;
+    margin: 0;
+    display: block;
+}
+
+
+/* Style pour la navbar.*/
+#navbar {
+    background-color: #f7f7f9;
+    position: fixed;
+    display: block;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+    z-index: 1;
+
+    padding: 8px 16px;
+    /* add color #acacae or blue */    
+}
+
+#navbar-titre {
+    float: left;
+    font-size: 16px;
+    color: white;
+    margin-right: 40px;
+    background-color: #08316C;
+    border: 1px solid transparent;
+    border-radius: 0.25rem; 
+    padding: 6px 16px;
+}
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    float: left;
+}
+
+.navbar-nav .nav-link {
+    display: block;
+    padding-top: 0.425rem;
+    padding-bottom: 0.425rem;
+}
+
+.nav-item {
+    float: left;
+}
+
+.nav-link {
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+}
+
+.nav-link:hover {
+    color: #373a3c;
+}
+
+
+.hover_animation{
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+}
+
+.hover_animation:hover{
+	transform: scale(1.03);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .05);
+	z-index:2;
+}
+
+/* ************************************ */
+
+
+
+#container {
+    vertical-align: middle; 
+}
+
+/* Style pour la boîte avec les langues.*/
+#flexbox_langues {
+    display: flex; 
+    justify-content: space-evenly; 
+    
+    width: 90%;
+    padding: 15px;
+    margin-left:5%; 
+    border-radius: 5px;
+
+    background-color: rgb(236, 236, 236);
+
+    transition: all 0.5s ease;
+
+}
+
+#flexbox_langues:hover {
+    background-color: rgb(224, 222, 222);
+}
+
+article > img {
+    margin: 20px;
+}
+/* ************************************ */
