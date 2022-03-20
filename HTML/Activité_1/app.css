@@ -1,24 +1,129 @@
-.headers,header {
-    text-align: center; 
-    color: #ff0000;;
-    height: 120px;
-        
+
+/* ########## ############# ########## */
+/* ########## Style général ########## */
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #373a3c;
+    margin: 1px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+
+    background-repeat:repeat;
+    background-image:url('./images/wp_francais.jpg');
+    border: 3px dotted green;
 }
 
-#head_img {
-    margin-right: 15px;
-    position: relative;
-    top: -92px;
-    float: right; 
-    
+h1,h2,h3,h4 {
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 500;
+    font-family: inherit;
+    color: inherit;
+    margin-bottom: 8px;
+    margin-top: 0;
 }
 
-.links {
-    background-color: rgba(185, 185, 185, 0.527);
-    border : 3px ridge;
-    height: 45px;
-    margin-top: 5px ;
-    padding: 5px;
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h4 { font-size: 24px; }
+
+
+
+/* ########## ########## ########## */
+/* ########## Animations ########## */
+
+.hover_animation { transition: .3s transform, .3s box-shadow, .3s; }
+
+.hover_animation:hover {
+	transform: scale(1.05);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .05);
+	z-index:2;
+}
+
+
+/* ########## #################### ########## */
+/* ########## Style pour le bandeau ########## */
+
+aside {
+    background-color: rgb(2, 117,216);
+    margin: 0;
+    overflow: auto;
+    writing-mode: vertical-rl;
+    text-align: center;
+    padding-right: 20px;
+}
+
+
+/* ########## #################### ########## */
+/* ########## Style pour la navbar ########## */
+
+#navbar {
+    background-color: #f7f7f9;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+    z-index: 1;
+    padding: 8px 16px;
+}
+
+#navbar-titre {
+    background-color: #08316C;
+    color: white;
+    text-decoration-line: none;
+    float: left;
+    margin-right: 30px;
+    border: 1px solid transparent;
+    border-radius: 4px; 
+    padding: 6px 16px;
+}
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    float: left;
+    display: block;
+    margin-block-start: 0px !important;
+    padding-top: 6,8px;
+    padding-bottom: 6,8px;
+}
+
+.nav-item {
+    float: left;
+    margin-left: 16px;
+}
+
+.nav-link {
+    color: rgb(2, 117,216);
+    display: block;
+    padding-top: 6.8px;
+    padding-bottom: 6.8px;
+    text-decoration-line: none;
+}
+
+.nav-link:hover {
+    color: #373a3c;
+    text-decoration-line: underline;
+}
+
+
+.div-flag {
+    display: block;
+    float: right !important;
+    height: 38px;
+    margin-top: 0;
+    transition: all 0.5s ease;
+
+}
+
+.div-flag:hover {
+    background-color: rgb(212, 211, 211);
 }
 
 .flag {
@@ -28,15 +133,54 @@
     margin: 5px 7px;
 }
 
-.article {
-    float: left;
-    margin-right: 20%;
+
+/* ########## #################### ########## */
+/* ########## Style pour le header ########## */
+
+header {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 66% 33%;
+    color:red;
+
+}
+
+header h1 {
+    text-shadow: 0.1em 0.1em 0.2em black
+}
+
+#img_header {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+}
+
+
+/* ########## ####################### ########## */
+/* ########## Style pour les articles ########## */
+
+#flexbox_articles {
+    display: flex; 
+    justify-content: space-evenly; 
+    width: 90%;
+    padding: 15px;
+    margin-left:5%; 
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236, 0.5);
+    transition: all 0.5s ease;
+}
+
+#flexbox_articles:hover { 
+    background-color: rgb(236, 236, 236); 
+}
+
+article { 
+    padding: 5px; 
 }
 
 table {
     border: 1px solid black;
     width: 300px;
-    
 }
 
 td, th {
@@ -48,4 +192,52 @@ td, th {
 
 th {
     background-color: whitesmoke;
+}
+
+
+/* ########## ################### ########## */
+/* ########## Style pour la video ########## */
+
+#div_video { text-align: center; }
+
+/* ########## #################### ########## */
+/* ########## Style pour le iframe ########## */
+
+#div_lien { text-align: center; }
+
+#div_lien a {
+    color: rgb(2, 117,216);
+    text-decoration-line: none;
+    transition: all 0.5s ease;
+
+}
+
+#div_lien b:hover a { 
+    color: red; 
+}
+
+/* ########## ########################################### ########## */
+/* ########## Style pour le le div du retoure à l'accueil ########## */
+
+#div_to_top { text-align: center; }
+#div_to_top img { width: 100px; }
+
+
+
+/* ########## ################### ########## */
+/* ########## Page Responsiveness ########## */
+/* ########## ################### ########## */
+
+@media (max-width: 840px) {
+    .nav { display: none; }
+    #div_lien iframe{ height: 380px !important; }
+    .div-flag {float: left !important;}
+}
+
+@media (max-width: 640px) {
+    
+    body { display: block; }
+    aside { display:none; }
+    #flexbox_articles { flex-direction: column; }
+    article { margin-top: 10px; }
 }

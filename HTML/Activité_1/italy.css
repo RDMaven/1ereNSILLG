@@ -1,0 +1,37 @@
+.pizza_img {
+    background-color: red;
+    border-radius: 500px;            
+    height: 500px;
+    width: 500px;
+    
+}
+
+body {
+    text-align: center;
+    background-repeat:no-repeat !important;
+    background-image:url('./images/bk_italy.jpeg') !important;
+    background-size: cover;
+}
+
+.pizza_p {
+    font-size: 50px;
+    color: rgb(145, 3, 3);
+
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+
+.rotate:hover {
+    animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
