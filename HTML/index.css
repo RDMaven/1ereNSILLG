@@ -1,0 +1,185 @@
+
+/* ########## ############# ########## */
+/* ########## Style général ########## */
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #373a3c;
+    margin: 1px;
+    background-color: rgb(184, 182, 182);
+}
+
+h1,h2,h3,h4 {
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 500;
+    font-family: inherit;
+    color: inherit;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h4 { font-size: 24px; }
+
+
+
+/* ########## ########## ########## */
+/* ########## Animations ########## */
+
+.hover_animation { transition: .3s transform, .3s box-shadow, .3s; }
+
+.hover_animation:hover {
+	transform: scale(1.05);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .05);
+	z-index:2;
+}
+
+
+/* ########## #################### ########## */
+/* ########## Style pour la navbar ########## */
+
+#navbar {
+    background-color: #f7f7f9;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+    z-index: 1;
+    padding: 8px 16px;
+}
+
+#navbar-titre {
+    background-color: #08316C;
+    color: white;
+    text-decoration-line: none;
+    float: left;
+    margin-right: 30px;
+    border: 1px solid transparent;
+    border-radius: 4px; 
+    padding: 6px 16px;
+}
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    float: left;
+    display: block;
+    margin-block-start: 0px !important;
+    padding-top: 6,8px;
+    padding-bottom: 6,8px;
+}
+
+.nav-item {
+    float: left;
+    margin-left: 16px;
+}
+
+.nav-link {
+    color: rgb(2, 117,216);
+    display: block;
+    padding-top: 6.8px;
+    padding-bottom: 6.8px;
+    text-decoration-line: none;
+}
+
+.nav-link:hover {
+    color: #373a3c;
+    text-decoration-line: underline;
+}
+
+
+.div-flag {
+    display: block;
+    float: right !important;
+    height: 38px;
+    margin-top: 0;
+    transition: all 0.5s ease;
+
+}
+
+.div-flag:hover {
+    background-color: rgb(212, 211, 211);
+}
+
+.flag {
+    width: 40px;
+    height: 28px;
+    float: left;
+    margin: 5px 7px;
+    background-color: black;
+}
+
+
+/* ########## #################### ########## */
+/* ########## Style pour le header ########## */
+
+header {
+    margin: 0;
+    color:#08316C;
+}
+
+
+/* ########## ####################### ########## */
+/* ########## Style pour les articles ########## */
+
+.flexbox_articles {
+    display: flex; 
+    justify-content: space-evenly; 
+    width: 90%;
+    padding: 15px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236, 0.5);
+    transition: all 0.5s ease;
+}
+
+.flexbox_articles:hover { 
+    background-color: rgb(236, 236, 236); 
+}
+
+article { 
+    padding: 5px; 
+}
+
+article img {
+    width: 300px;
+    height: 200px;
+}
+
+
+#div_to_top { text-align: center; }
+#div_to_top img { width: 100px; }
+
+
+
+/* ########## ################### ########## */
+/* ########## Page Responsiveness ########## */
+/* ########## ################### ########## */
+
+@media (max-width: 1040px) {
+    article img {
+        width: 200px;
+        height: 133px;
+    }
+}    
+
+
+@media (max-width: 840px) {
+    .nav { display: none; }
+    #div_lien iframe{ height: 380px !important; }
+    .div-flag {float: left !important;}
+}
+
+@media (max-width: 640px) {
+    body { display: block; }
+    .flexbox_articles { flex-direction: column; width: 50%;}
+    article { margin-top: 10px; text-align: center; }
+    
+}
