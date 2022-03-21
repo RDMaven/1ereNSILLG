@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        
+        <!-- Metadata -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Max JA" name="author">
+
+        <title>Activité 2</title>
+        
+        <!-- External links CSS -->
+        <link rel="stylesheet" href="app.css">
+        <script src="./app.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+        
+    </head>
+
+    <body style="background-image: url(./images/sceaux2.jpeg);background-size: cover; background-repeat: no-repeat;">
+ 
+       <section id="one">
+                    
+            <nav id="navbar">
+                <a id="navbar-titre" class="hover_animation" href="../../index.html">NSI Activité 2</a>
+                <ul class="nav">
+                </ul>
+                <div class="div-flag">  
+                    <a href="#"><div class="flag hover_animation"></div></a>
+                    <a href="#"><div class="flag hover_animation"></div></a>
+                    <a href="#"><div class="flag hover_animation"></div></a>
+                </div>      
+            </nav>
+            
+            <p><br><br></p>
+    
+            <header> <h1><b>Convertisseur( $ &#x21C4; &euro; )</b></h1> </header>
+
+            <p><br><br><br></p>
+           
+            <div class="flexbox_articles">
+    
+
+                    <form name="formul" onsubmit="convert()">
+
+                        <div>
+                            <label for="somme">&nbsp;</label><input type="text" name="somme"><br>
+                        </div>
+                        
+                        <div>
+                            <label for="to">To : </label>
+                            <select name="to" id="to">
+                                <option value="eur">Euro (EUR)</option>
+                                <option value="usd">Dollar (USD)</option>
+                              </select>
+                        </div>
+
+                        <p><input type="reset" value="Effacer" style="margin-right: 10px;"><input type="submit" value="OK"></p>
+                        
+                    </form>
+
+
+            </div>
+            
+
+            <p><br><br></p>
+        </section>
+    </body>
+</html>
