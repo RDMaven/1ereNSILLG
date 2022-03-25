@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        
+        <!-- Metadata -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Max JA" name="author">
+
+        <title>Activité 2</title>
+        
+        <!-- External links CSS -->
+        <link rel="stylesheet" href="app.css">
+        <script src="./app.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+        
+    </head>
+
+    <body>
+ 
+       <section id="one">
+                    
+            <nav id="navbar">
+                <a id="navbar-titre" class="hover_animation" href="../../index.html">NSI Activité 2</a>
+                <ul class="nav">
+                </ul>
+                <div class="div-flag">  
+                    <a href="#"><div class="flag hover_animation"></div></a>
+                    <a href="#"><div class="flag hover_animation"></div></a>
+                    <a href="#"><div class="flag hover_animation"></div></a>
+                </div>      
+            </nav>
+            
+            <p><br><br></p>
+    
+            <header> <h1><b>Nom et Date</b></h1> </header>
+
+            <p><br><br><br></p>
+           
+            <div class="flexbox_articles">
+                    <form name="formul"> 
+                        <label for="lname">Votre nom :&nbsp;</label><input type="text" class="form-control" name="name" id="name">      
+                        <div style="margin-top: 20px; display: flex;">
+                            <button type="reset" class="btn btn-danger btn-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" style="display:block;" fill="currentColor" class="bi bi-trash" ><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/><path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                              </svg>
+                            </button>
+
+                            <button class="btn btn-success btn-primary" type="button" onclick="laDate()" style="margin-left:1%; width: 80%">
+                                Go !
+                            </button>
+                        </div>
+                    </form>
+            </div>
+
+            <div class="flexbox_articles result-div" style="margin-top: 20px; display: none; padding: 10px;" >
+    
+                <p class="result-p" style="margin: auto; font-size: 20px;"></p>
+
+                </form>
+        </div>
+            
+
+            <p><br><br></p>
+        </section>
+    </body>
+</html>
