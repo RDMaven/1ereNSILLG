@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        
+        <!-- Metadata -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Max JA" name="author">
+
+        <title>Activité 2</title>
+        
+        <!-- External links CSS -->
+        <link rel="stylesheet" href="app.css">
+        <script src="./app.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+        
+    </head>
+
+    <body style="background-image: url(./images/sceaux2.jpeg);background-size: cover; background-repeat: no-repeat;">
+ 
+       <section id="one">
+                    
+            <nav id="navbar">
+                <a id="navbar-titre" class="hover_animation" href="../../index.html">NSI Activité 2</a>
+                <ul class="nav">
+                </ul>
+                <div class="div-flag">  
+                    <a href="#"><div class="flag hover_animation"></div></a>
+                    <a href="#"><div class="flag hover_animation"></div></a>
+                    <a href="#"><div class="flag hover_animation"></div></a>
+                </div>      
+            </nav>
+            
+            <p><br><br></p>
+    
+            <header> <h1><b>Séléctionnez votre voyage</b></h1> </header>
+
+            <p><br><br><br></p>
+           
+            <div class="flexbox_articles">
+    
+
+                    <form name="formul" onsubmit="voyage()">
+
+                        <div>
+                            <label for="lname">Votre nom :&nbsp;</label><input type="text" name="lname" id="lname"> <br>
+                            <label for="fname">Votre prénom :&nbsp;</label><input type="text" name="fname" id="fname">
+                        </div>
+
+                        <div>
+                            <p>Choisissez votre ville de départ : <br>
+                                <input type="radio" name="from" value="Marseille" id="marseille"> <label for="marseille">Marseille</label><br>
+                                <input type="radio" name="from" value="Paris" id="paris">         <label for="paris">Paris</label><br>
+                                <input type="radio" name="from" value="Lyon" id="lyon">           <label for="lyon">Lyon</label>
+                            </p>
+                        </div>
+
+                        <div>
+                            <label for="to">Choisissez votre destination :</label>
+                            <select name="to" id="to">
+                                <option value="Singapour">Singapour</option>
+                                <option value="New York">New York</option>
+                                <option value="Sydney">Sydney</option>
+                                <option value="Sceaux">Sceaux</option>
+                                <option value="Tokyo">Tokyo</option>
+                                <option value="Russie" disabled>Russie</option>
+                                <option value="Ukraine" disabled>Ukraine</option>
+                              </select>
+                        </div>
+
+                        <div>
+                            <p>Choisissez les options du voyage : <br>
+                                <input type="checkbox" name="matin" value="matin" id="matin">
+                                <label for="matin">Petit déjeuner</label><br>
+                                <input type="checkbox" name="midi" value="midi" id="midi">
+                                <label for="midi">Déjeuner</label><br>
+                                <input type="checkbox" name="soir" value="soir" id="soir">
+                                <label for="soir"> Diner</label>
+                            </p>
+                        </div>
+
+                        <p><input type="reset" value="Effacer" style="margin-right: 10px;"><input type="submit" value="OK"></p>
+                        
+                    </form>
+
+
+            </div>
+            
+
+            <p><br><br></p>
+        </section>
+    </body>
+</html>
